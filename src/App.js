@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import GlobalStyle from './globalStyles';
+import Home from "./pages/Home";
+import {ThemeProvider} from "styled-components";
+import {lightTheme, darkTheme} from "./globalStyles";
+import {useState, useEffect} from "react";
 
 function App() {
+  const [theme, setTheme] = useState('dark');
+
+  const setMode = mode => {
+    window.localStorage.setItem('theme', mode)
+    setTheme(mode)
+  };
+
+  const themeToggler = () => {  
+    theme === 'dark' ? setMode('light') : setMode('dark')
+    // window.localStorage.setItem('theme', theme)
+  }
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem('theme');
+    savedTheme && setTheme(savedTheme)
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme} >
+      <GlobalStyle />
+      <Home themeToggler={themeToggler} />
+    </ThemeProvider>
   );
 }
 
