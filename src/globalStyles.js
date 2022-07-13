@@ -32,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
 
 export const Container = styled.div`
   padding: 10rem 8rem;
-  max-width: 1200px;
+  /* max-width: 1400px; */
 `;
 
 export const Heading = styled.h1`
@@ -41,7 +41,8 @@ export const Heading = styled.h1`
 `
 
 export const SubHeading = styled.p`
-  font-size: 2rem;
+  font-size: 2.2rem;
+  margin-bottom: 4rem;
 `
 
 export const Button = styled.div`
@@ -53,7 +54,7 @@ export const Button = styled.div`
 `
 // Themes
 export const lightTheme = {
-  background: 'white',
+  background: '#efe7e7',
   text: '#131e2a'
 }
 
