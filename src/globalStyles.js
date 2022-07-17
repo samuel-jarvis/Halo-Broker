@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     --yellow: #fab52c;
     --blue: #0094fe;
     --red: #f35130;
+    --card: #1d2c3d;
   }
 
   * {
@@ -31,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  padding: 10rem 8rem;
+  padding: 10rem 12rem;
   /* max-width: 1400px; */
 `;
 
@@ -59,7 +60,8 @@ export const lightTheme = {
 }
 
 export const darkTheme = {
-  background: '#131e2a',
+  // background: '#131e2a',
+  background: '#0e121b',
   text: 'white'
 }
 

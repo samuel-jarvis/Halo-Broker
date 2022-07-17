@@ -32,21 +32,23 @@ export const LatestCards = styled.div`
 
 export const MainCard = styled.div`
   border-radius: 2rem;
-  padding: 1.5rem;
+  padding: 2rem;
 
   h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-bottom: .5rem;
     text-transform: uppercase;
     color: white;
-    color: #efe7e7;
   }
 `;
 
   
 export const CardOne = styled(MainCard)`
   background-color: var(--blue);
+  background-color: #1d2c3d;
+  background-color: var(--card);
+
 `
 
 export const Text = styled.p`
