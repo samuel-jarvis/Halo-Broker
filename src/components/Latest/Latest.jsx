@@ -1,7 +1,9 @@
-import React from 'react'
-import securityPng from '../../asset/security.png'
-import { LatestContainer, 
-  LatestHeading, 
+import React from "react";
+import Line from "../../asset/line.png";
+import securityPng from "../../asset/security.png";
+import {
+  LatestContainer,
+  LatestHeading,
   LatestSubHeading,
   LatestCards,
   CardOne,
@@ -9,15 +11,17 @@ import { LatestContainer,
   CardThree,
   CardFour,
   CardFive,
-  Text, PlayButton, Fingerprint,
-  SecurityImage} from './LatestStyled'
+  Text,
+  PlayButton,
+  Fingerprint,
+  SecurityImage,
+  ChartLine
+} from "./LatestStyled";
 
 const Latest = () => {
   return (
     <LatestContainer>
-      <LatestHeading>
-        The Lastest from our broker
-      </LatestHeading>
+      <LatestHeading>The Lastest from our broker</LatestHeading>
       <LatestSubHeading>
         New Features, latest webinars and more...
       </LatestSubHeading>
@@ -25,24 +29,32 @@ const Latest = () => {
       <LatestCards>
         <CardOne>
           <h3>CHF JPY</h3>
+          <Text>
+            Trade the best currency pairs.
+          </Text>
+          <ChartLine>
+            <img src={Line} alt="line" />
+          </ChartLine>
         </CardOne>
         <CardTwo>
           <h3>Secure Account</h3>
-          <Text>You can now use your fingerprint to access your Mobile app</Text>
+          <Text>
+            You can now use your fingerprint to access your Mobile app
+          </Text>
           <Fingerprint />
-          <SecurityImage> 
+          <SecurityImage>
             <img src={securityPng} alt="security" />
           </SecurityImage>
         </CardTwo>
         <CardThree>
           <h3>Webinar</h3>
           <Text>Trading Strategy "Triple Ricochet"</Text>
-          <PlayButton/>
+          <PlayButton />
         </CardThree>
         <CardFour>
           <h3>Education</h3>
           <Text>How to start trading on the platform</Text>
-          <PlayButton/>
+          <PlayButton />
         </CardFour>
         <CardFive>
           <h3>Annivesary</h3>
@@ -50,8 +62,7 @@ const Latest = () => {
         </CardFive>
       </LatestCards>
     </LatestContainer>
+  );
+};
 
-  )
-}
-
-export default Latest
+export default Latest;

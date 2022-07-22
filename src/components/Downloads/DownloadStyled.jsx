@@ -7,20 +7,25 @@ import {
 
 export const DownloadsContainer = styled.div`
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
   display: flex;
+  flex-wrap: wrap;
   /* justify-content: space-between; */
 
   & > div {margin-right: 8rem;}
+
+  @media (max-width: 700px) {
+    & > div {margin-right: 0;
+    margin-bottom: 4rem;}
+  }
 `
 
 export const DownloadPlatforms = styled.div``;
 
 
-export const DeviceCategory = styled.div`
-  
+export const DeviceCategory = styled.div` 
 `
-
+ 
 export const CategoryHeading = styled.p`
   font-size: 2rem;
   color: var(--blue);
@@ -28,7 +33,16 @@ export const CategoryHeading = styled.p`
 `
 
 export const DeviceGroup = styled.div`
-  display: flex;
+  display: ${props => props.grid ? 'grid' : 'flex'};
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 2rem;
+  /* display: flex; */
+
+  @media (max-width: 750px) {
+    grid-column: unset;
+    grid-template-columns: 1fr;
+  }
 `
 
 export const CardDetails = styled.div`

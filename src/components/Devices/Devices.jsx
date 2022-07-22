@@ -17,7 +17,7 @@ import {
   StarIconHalf,
   RatingValue,
   SplideContainer,
-  SplideElement
+  SplideElement,
 } from "./DevicesStyled";
 
 const Devices = () => {
@@ -31,28 +31,27 @@ const Devices = () => {
 
       <DevicesInfoContent>
         <DevicesInfoImage>
-          <img
-            src={devicesImage}
-            alt="devices"
-          />
+          <img src={devicesImage} alt="devices" />
         </DevicesInfoImage>
         <DevicesInfoText>
           <p>
             The custom-built platform has been adapted to any device you may
             choose and switching is 100% seamless.
           </p>
-          <SplideContainer options={{pagination: true, 
-            gap : '1rem',
-            arrows: false,
-            paginationDirection: 'ttb',
-            direction: 'ttb',
-            heightRatio : 0.4,
-            autoplay: true,
-            interval: 3000,
-            speed: 400,
-            type: 'loop'
-            }}>
-
+          <SplideContainer
+            options={{
+              pagination: true,
+              // gap: "1rem",
+              arrows: false,
+              // // paginationDirection: "ttb",
+              // // direction: "ttb",
+              // // heightRatio: 0.4,
+              autoplay: true,
+              interval: 4000,
+              // speed: 600,
+              // type: "loop",
+            }}
+          >
             <DevicesInfoRatingCard>
               <RatingInfo>
                 <RatingValue>4.5</RatingValue>
@@ -68,7 +67,8 @@ const Devices = () => {
                 </RatingStars>
               </RatingInfo>
               <p>
-                This is the best trading platform I've ever seen. Thank you so much!
+                This is the best trading platform I've ever seen. Thank you so
+                much!
               </p>
             </DevicesInfoRatingCard>
 
@@ -87,7 +87,8 @@ const Devices = () => {
                 </RatingStars>
               </RatingInfo>
               <p>
-                This is a demo project made by Samuel Jarvis Using React and Styled Components!
+                This is a demo project made by Samuel Jarvis Using React and
+                Styled Components!
               </p>
             </DevicesInfoRatingCard>
           </SplideContainer>

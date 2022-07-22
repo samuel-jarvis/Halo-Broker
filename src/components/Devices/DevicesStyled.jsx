@@ -26,11 +26,23 @@ export const DevicesSubHeading = styled(SubHeading)`
 
 export const DevicesInfoContent = styled.div`
   display: flex;
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
 `
 
 export const DevicesInfoImage = styled.div`
   padding: 0 10rem;
   flex: 0 0 60%;
+
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0;
+  }
 `
 
 export const DevicesInfoText = styled.div`
@@ -39,23 +51,27 @@ export const DevicesInfoText = styled.div`
   p {
     margin-bottom: 4rem;
     font-size: 2.4rem;
-    line-height: 1.8;
-    
+    line-height: 1.8; 
   }
 `
 
 // splide slider
-export const SplideContainer = styled(Splide)``
+export const SplideContainer = styled(Splide)`
+  border-radius: 2rem;
+  /* height: 100%; */
+`
 export const SplideElement = styled(SplideSlide)``
 
 export const DevicesInfoRatingCard = styled(SplideElement)`
   border-radius: 2rem;
   padding: 2rem;
+  padding-bottom: 4rem;
   background-color: var(--card);
 
   p {
     font-size: 1.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    color: white;
   }
 `
 
@@ -67,6 +83,7 @@ export const RatingInfo = styled.div`
 export const RatingValue = styled.h2`
   font-size: 4.4rem;
   font-weight: 500;
+  color: white;
 `
 export const RatingStars = styled.div`
   padding-left: 4rem;

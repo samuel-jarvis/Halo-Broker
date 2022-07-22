@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
     --green: #1cbe74;
     --yellow: #fab52c;
     --blue: #0094fe;
+    --blue-hover: rgb(25 131 207);
     --red: #f35130;
     --card: #1d2c3d;
   }
@@ -16,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-family: 'Jost', sans-serif;
+    border: 1px soild red;
   }
 
   html {
@@ -32,18 +34,34 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  padding: 10rem 12rem;
+  padding: 10rem 10rem;
+
+  @media (max-width: 1100px) {
+    padding: 8rem 4rem;
+  }
+
+  @media (max-width: 500px) {
+    padding: 6rem 2rem;
+  }
   /* max-width: 1400px; */
 `;
 
 export const Heading = styled.h1`
   font-size: 4rem;
   font-weight: 500;
+
+  @media (max-width: 900px) {
+    font-size: 3rem;
+  }
 `
 
 export const SubHeading = styled.p`
   font-size: 2.2rem;
   margin-bottom: 4rem;
+
+  @media (max-width: 900px) {
+    font-size: 1.8rem;
+  }
 `
 
 export const Button = styled.div`
@@ -52,6 +70,13 @@ export const Button = styled.div`
   padding: 1rem 2.5rem;
   background-color: var(--blue);
   border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    font-size: 1.9rem;
+    background-color: var(--blue-hover);
+  }
 `
 // Themes
 export const lightTheme = {

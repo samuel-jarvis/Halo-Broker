@@ -1,16 +1,17 @@
-import React from 'react'
-import mt4 from '../../asset/metatrader.png'
-import apple from '../../asset/apple.png'
-import playstore from '../../asset/playstore.png'
-import {DownloadsContainer,
+import React from "react";
+import mt4 from "../../asset/metatrader.png";
+import apple from "../../asset/apple.png";
+import playstore from "../../asset/playstore.png";
+import {
+  DownloadsContainer,
   DownloadGroup,
   CategoryHeading,
   DeviceCategory,
   DeviceCard,
   DeviceGroup,
   CardDetails,
-  DownloadAmt
-  } from './DownloadStyled'
+  DownloadAmt,
+} from "./DownloadStyled";
 
 const Downloads = () => {
   return (
@@ -18,9 +19,9 @@ const Downloads = () => {
       <DeviceCategory>
         <CategoryHeading>Desktop</CategoryHeading>
 
-        <DeviceGroup>
+        <DeviceGroup grid="grid">
           <DeviceCard>
-            <img src={mt4} alt=""/>
+            <img src={mt4} alt="" />
             <CardDetails>
               <p>Available On</p>
               <h4>MetaTrader4</h4>
@@ -28,7 +29,7 @@ const Downloads = () => {
           </DeviceCard>
 
           <DeviceCard>
-            <img src={apple} alt=""/>
+            <img src={apple} alt="" />
             <CardDetails>
               <p>Download App for</p>
               <h4>MacOs</h4>
@@ -42,11 +43,11 @@ const Downloads = () => {
 
         <DeviceGroup>
           <DeviceCard margin="0">
-            <img src={playstore} alt=""/>
+            <img src={playstore} alt="" />
           </DeviceCard>
 
           <DeviceCard margin="0">
-            <img src={apple} alt=""/>
+            <img src={apple} alt="" />
           </DeviceCard>
         </DeviceGroup>
       </DeviceCategory>
@@ -55,9 +56,8 @@ const Downloads = () => {
         <CategoryHeading>Apps Download</CategoryHeading>
         <DownloadAmt>12M+</DownloadAmt>
       </DeviceCategory>
-
     </DownloadsContainer>
-  )
-}
+  );
+};
 
-export default Downloads
+export default Downloads;
