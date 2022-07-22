@@ -17,7 +17,6 @@ import {
   StarIconHalf,
   RatingValue,
   SplideContainer,
-  SplideElement,
 } from "./DevicesStyled";
 
 const Devices = () => {

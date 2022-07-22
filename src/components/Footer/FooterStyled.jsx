@@ -49,7 +49,7 @@ export const SocialCards = styled.div`
 `
 
 export const SocialCard = styled.div`
-  background-color: ${props => props.bg == "blue" ? "var(--blue)" : "var(--red)"};
+  background-color: ${props => props.bg === "blue" ? "var(--blue)" : "var(--red)"};
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;

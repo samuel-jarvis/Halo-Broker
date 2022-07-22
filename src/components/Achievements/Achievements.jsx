@@ -9,13 +9,8 @@ import {
   AwardCard,
   AnnivessaryCard,
   CardHeading,
-  CardDetails
+  CardDetails,
 } from "./AchievementsStyled";
-
-import {Button} from "../../globalStyles";
-
-import award from '../../asset/award.png';
-import player from '../../asset/player.png';
 
 const Achievements = () => {
   return (
@@ -29,15 +24,23 @@ const Achievements = () => {
       <AchievementsCards>
         <PartnershipCard>
           <CardHeading>Partnership</CardHeading>
-          <CardDetails>One of the world's top Developers Samuel Jarvis (Nigeria) is now our Partner.</CardDetails>
+          <CardDetails>
+            One of the world's top Developers Samuel Jarvis (Nigeria) is now our
+            Partner.
+          </CardDetails>
         </PartnershipCard>
         <AwardCard>
           <CardHeading>Award</CardHeading>
-          <CardDetails>"Best Trading Plaform" The Forex Awards 2019</CardDetails>
+          <CardDetails>
+            "Best Trading Plaform" The Forex Awards 2019
+          </CardDetails>
         </AwardCard>
         <AnnivessaryCard>
           <CardHeading>Anniversary</CardHeading>
-          <CardDetails>This year we are 5 Years old and have organized a torunament with many awards and a record prize pool of $1,000,000.</CardDetails>
+          <CardDetails>
+            This year we are 5 Years old and have organized a torunament with
+            many awards and a record prize pool of $1,000,000.
+          </CardDetails>
         </AnnivessaryCard>
       </AchievementsCards>
       <AchievementButton>Start Trading - It's Freee</AchievementButton>

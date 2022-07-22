@@ -4,7 +4,6 @@ import apple from "../../asset/apple.png";
 import playstore from "../../asset/playstore.png";
 import {
   DownloadsContainer,
-  DownloadGroup,
   CategoryHeading,
   DeviceCategory,
   DeviceCard,

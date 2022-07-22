@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { BsFillPlayCircleFill } from "react-icons/bs";
 import { FaFingerprint } from "react-icons/fa";
-import securityPng from "../../asset/security.png";
 
 import { Container, Heading, SubHeading } from "../../globalStyles";
 

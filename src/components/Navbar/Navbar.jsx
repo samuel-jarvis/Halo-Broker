@@ -1,57 +1,64 @@
-import React from 'react'
-import {ReactComponent as Svg} from '../../asset/halo-logo.svg'
-import {Nav, NavContainer, NavLogo, NavLinks, NavLink, NavFeatures, ToggleButton, MobileIcon, NavButton} from './NavStyled'
-import { useState } from 'react'
-import {BsLightbulb, BsLightbulbOff} from 'react-icons/bs'
-import {FaBars, FaTimes} from 'react-icons/fa'
-import { useTheme } from 'styled-components'
+import React from "react";
+import { ReactComponent as Svg } from "../../asset/halo-logo.svg";
+import { useState } from "react";
+import { BsLightbulb, BsLightbulbOff } from "react-icons/bs";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useTheme } from "styled-components";
 
+import {
+  Nav,
+  NavContainer,
+  NavLogo,
+  NavLinks,
+  NavLink,
+  NavFeatures,
+  ToggleButton,
+  MobileIcon,
+  NavButton,
+} from "./NavStyled";
 
-
-const Navbar = ({themeToggler}) => {
-  const [showNav, setShowNav] = useState(false)
+const Navbar = ({ themeToggler }) => {
+  const [showNav, setShowNav] = useState(false);
   const handleNav = () => {
-    {showNav ? setShowNav(false) : setShowNav(true)}
-  }
+    showNav ? setShowNav(false) : setShowNav(true);
+  };
 
   const closeNav = () => {
-    setShowNav(false)
-  }
+    setShowNav(false);
+  };
 
   const theme = useTheme();
   return (
     <Nav>
       <NavContainer>
-
         <MobileIcon onClick={handleNav}>
           {showNav ? <FaTimes /> : <FaBars />}
         </MobileIcon>
-        
+
         <NavLogo>
-          <Svg/>
+          <Svg />
         </NavLogo>
 
         <NavLinks showNav={showNav} onClick={closeNav}>
-          <NavLink to='/'>Home</NavLink>
-          <NavLink to='/'>About</NavLink>
-          <NavLink to='/'>Contact</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/">About</NavLink>
+          <NavLink to="/">Contact</NavLink>
         </NavLinks>
 
         <NavFeatures>
           <ToggleButton onClick={themeToggler}>
-            {theme.text === 'white' ? 
-              <BsLightbulb size={20}/> : 
-              <BsLightbulbOff size={20}/>
-            }
+            {theme.text === "white" ? (
+              <BsLightbulb size={20} />
+            ) : (
+              <BsLightbulbOff size={20} />
+            )}
           </ToggleButton>
 
           <NavButton>Sign Up</NavButton>
         </NavFeatures>
-
       </NavContainer>
     </Nav>
-  )
-}
+  );
+};
 
-export default Navbar
-
+export default Navbar;

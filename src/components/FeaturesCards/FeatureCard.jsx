@@ -1,28 +1,18 @@
-import React from 'react'
-import { icons } from 'react-icons/lib'
-import {Card,
-  CardIcon,
-  CardTitle,
-  CardDetails} from './CardStyled'
+import React from "react";
+import { Card, CardIcon, CardTitle, CardDetails } from "./CardStyled";
 
-const FeatureCard = ({card}) => {
-  console.log(card.icon)
+const FeatureCard = ({ card }) => {
+  console.log(card.icon);
 
   return (
     <Card>
-      <CardIcon>
-        {card.icon}
-      </CardIcon>
+      <CardIcon>{card.icon}</CardIcon>
 
-      <CardTitle>
-        {card.title}
-      </CardTitle>
+      <CardTitle>{card.title}</CardTitle>
 
-      <CardDetails>
-        {card.details}
-      </CardDetails>
+      <CardDetails>{card.details}</CardDetails>
     </Card>
-  )
-}
+  );
+};
 
-export default FeatureCard
+export default FeatureCard;
